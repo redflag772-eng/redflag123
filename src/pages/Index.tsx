@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import MissionSection from "@/components/MissionSection";
 import ThreatSection from "@/components/ThreatSection";
 import LevelSection from "@/components/LevelSection";
 import Quiz from "@/components/Quiz";
@@ -18,6 +19,7 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <MissionSection />
         <ThreatSection />
         <LevelSection onTakeQuiz={scrollToQuiz} />
       </main>
