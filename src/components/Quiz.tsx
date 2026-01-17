@@ -5,7 +5,7 @@ import { ArrowLeft, ArrowRight, CheckCircle, Flag, RotateCcw, XCircle } from "lu
 const questions = [
   {
     id: 1,
-    question: "You received an email from your bank asking you to verify your account by clicking a link. What's your first action?",
+    question: "You receive an email from your bank asking you to verify your account by clicking a link. What's your first action?",
     options: [
       { text: "Click the link immediately to avoid account suspension", score: 0 },
       { text: "Check if the email looks professional before clicking", score: 1 },
