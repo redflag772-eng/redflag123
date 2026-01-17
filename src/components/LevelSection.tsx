@@ -1,6 +1,5 @@
-import { BookOpen, GraduationCap, Rocket, ChevronRight } from "lucide-react";
+import { BookOpen, GraduationCap, Rocket, ChevronRight, Mail } from "lucide-react";
 import { Button } from "./ui/button";
-
 const levels = [
   {
     id: "beginner",
@@ -42,9 +41,10 @@ const levels = [
 
 interface LevelSectionProps {
   onTakeQuiz: () => void;
+  onOpenSimulator: () => void;
 }
 
-const LevelSection = ({ onTakeQuiz }: LevelSectionProps) => {
+const LevelSection = ({ onTakeQuiz, onOpenSimulator }: LevelSectionProps) => {
   return (
     <section id="levels" className="py-24 relative">
       <div className="container mx-auto px-4">
@@ -56,10 +56,16 @@ const LevelSection = ({ onTakeQuiz }: LevelSectionProps) => {
             Whether you're just starting out or looking to master advanced techniques, 
             we have the right content for you.
           </p>
-          <Button variant="heroOutline" onClick={onTakeQuiz}>
-            Not sure? Take the quiz to find your level
-            <ChevronRight className="h-4 w-4" />
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="heroOutline" onClick={onTakeQuiz}>
+              Not sure? Take the quiz to find your level
+              <ChevronRight className="h-4 w-4" />
+            </Button>
+            <Button variant="hero" onClick={onOpenSimulator}>
+              <Mail className="h-4 w-4" />
+              Try Phishing Simulator
+            </Button>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
