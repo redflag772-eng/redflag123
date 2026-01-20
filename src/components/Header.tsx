@@ -1,5 +1,6 @@
 import { Flag, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 
 const Header = () => {
@@ -19,15 +20,15 @@ const Header = () => {
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
-          <a href="#threats" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
+          <a href="/#threats" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
             Threats
           </a>
-          <a href="#levels" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
+          <a href="/#levels" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
             Levels
           </a>
-          <a href="#quiz" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
-            Find Your Level
-          </a>
+          <Link to="/contact" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
+            Contact
+          </Link>
           <Button variant="hero" size="sm">
             Get Started
           </Button>
@@ -44,15 +45,15 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-xl">
           <nav className="container mx-auto flex flex-col gap-4 p-4">
-            <a href="#threats" className="text-muted-foreground hover:text-foreground transition-colors py-2">
+            <a href="/#threats" className="text-muted-foreground hover:text-foreground transition-colors py-2">
               Threats
             </a>
-            <a href="#levels" className="text-muted-foreground hover:text-foreground transition-colors py-2">
+            <a href="/#levels" className="text-muted-foreground hover:text-foreground transition-colors py-2">
               Levels
             </a>
-            <a href="#quiz" className="text-muted-foreground hover:text-foreground transition-colors py-2">
-              Find Your Level
-            </a>
+            <Link to="/contact" className="text-muted-foreground hover:text-foreground transition-colors py-2">
+              Contact
+            </Link>
             <Button variant="hero" className="w-full">
               Get Started
             </Button>
